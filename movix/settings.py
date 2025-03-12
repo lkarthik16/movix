@@ -98,10 +98,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # IMDb API key
-IMDB_API_KEY = '4e6b291435msh4bf8f45675a1e60p142391jsn04ae146b8968'
+IMDB_API_KEY = os.getenv('IMDB_API_KEY', '4e6b291435msh4bf8f45675a1e60p142391jsn04ae146b8968')
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
