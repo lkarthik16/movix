@@ -1,0 +1,21 @@
+/* Custom styles for IMDb-like theme */
+body {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text */
+}
+
+.imdb-yellow {
+    color: #F5C518; /* IMDb's golden-yellow color */
+}
+
+.imdb-bg-yellow {
+    background-color: #F5C518; /* IMDb's golden-yellow background */
+}
+
+.imdb-border-yellow {
+    border-color: #F5C518; /* IMDb's golden-yellow border */
+}
+
+.imdb-hover-bg-yellow:hover {
+    background-color: #e4b013; /* Slightly darker yellow on hover */
+}

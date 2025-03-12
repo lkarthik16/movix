@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movix - Where Films Live</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="flex flex-col items-center min-h-screen">
+        <header class="w-full py-6 bg-gray-900 bg-opacity-80 fixed top-0 left-0 z-50">
+            <div class="flex justify-center items-center max-w-screen-xl mx-auto px-4">
+                <h1 class="text-5xl font-bold imdb-yellow">Movix</h1>
+            </div>
+            <div class="flex justify-center items-center mt-4">
+                <h3 class="text-white-400 text-xl font-bold capitalize tracking-wide">Look up film details</h3>
+            </div>
+        </header>
+    
+        <div class="flex flex-col justify-between items-center w-full pt-40">
+            <div class="flex w-full justify-center mb-6 px-4">
+                <input
+                    type="text"
+                    id="movieName"
+                    class="border-none outline-none w-2/5 bg-gray-800 px-4 py-2 rounded-sm text-lg text-white placeholder-gray-400"
+                    placeholder="Search Movix"
+                    oninput="fetchSuggestions()"
+                />
+                <button
+                    onclick="fetchMovieInfo()"
+                    class="outline-none border imdb-border-yellow font-bold ml-4 px-8 py-3 rounded-sm imdb-bg-yellow text-black transition duration-300 imdb-hover-bg-yellow"
+                >
+                    Search
+                </button>
+            </div>
+            <div id="suggestions" class="w-2/5 bg-gray-800 mt-4 rounded-sm text-white"></div>
+        </div>
+    
+        <!-- Movie Details -->
+        <div id="movieInfo" class="mt-12 w-4/5 h-auto border border-gray-700 p-6 rounded-lg movie-info-card hidden bg-gray-800">
+            <div class="flex items-center">
+                <img id="movieImage" src="" alt="" class="w-64 h-96 rounded-md shadow-lg">
+                <div class="ml-8 flex-1">
+                    <h2 class="text-3xl font-bold tracking-wider mb-4">
+                        <span class="imdb-yellow capitalize">Title:</span> <span id="movieTitle"></span>
+                    </h2>
+                    <h2 class="text-xl font-bold mb-4 tracking-wider">
+                        <span class="imdb-yellow capitalize">Year:</span> <span id="movieYear"></span>
+                    </h2>
+                    <h2 class="text-xl font-bold mb-4 tracking-wider">
+                        <span class="imdb-yellow capitalize">Cast:</span> <span id="movieCast"></span>
+                    </h2>
+                    <h2 class="text-xl font-bold mb-4 tracking-wider">
+                        <span class="imdb-yellow capitalize">Plot:</span> <span id="moviePlot"></span>
+                    </h2>
+                    <h2 class="text-xl font-bold mb-4 tracking-wider">
+                        <span class="imdb-yellow capitalize">Rating:</span> <span id="movieRating"></span>
+                    </h2>
+                    <a id="imdbLink" href="" target="_blank">
+                        <button class="outline-none border imdb-border-yellow font-bold px-8 py-3 rounded-sm imdb-bg-yellow text-black transition duration-300 imdb-hover-bg-yellow">
+                            Visit IMDb
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <footer class="mt-16 text-gray-400 text-center py-6 bg-gray-900 bg-opacity-60 w-full">
+            <p>&copy; 2025 Movix. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>
