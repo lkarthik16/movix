@@ -92,9 +92,6 @@ How to Use
 3. Click Search or select a suggestion from the autocomplete dropdown.
 4. View the movie details displayed on the page.
 
-Screenshots
-https://drive.google.com/uc?id=1qSM1nZglJ5RMdJD0FD
-
-https://drive.google.com/uc?id=1MYrA2NVaIWhu0qk4l4
-
-https://drive.google.com/uc?id=1OYxILnhr00eE4hm0tq
+![alt text](Movix-Snap-01.png)
+![alt text](Movix-Snap-02.png)
+![alt text](Movix-Snap-03.png)
