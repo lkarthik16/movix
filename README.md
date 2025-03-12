@@ -62,7 +62,9 @@ Movix is a Django-based web application that fetches movie details using the IMD
 8. Access the Application:
     Open your browser and go to http://127.0.0.1:8000/
 
-Project Structure
+
+##Project Structure
+```
 movix/
 ├── movix/
 │   ├── settings.py
@@ -85,6 +87,7 @@ movix/
 ├── README.md
 ├── manage.py
 └── requirements.txt
+```
 
 How to Use
 1. Open the application in your browser.
