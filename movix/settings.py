@@ -16,7 +16,11 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-ALLOWED_HOSTS = ['movix.onrender.com']
+ALLOWED_HOSTS = [
+    'movix-29zz.onrender.com',
+    'localhost',  # For local development
+    '127.0.0.1',  # For local development
+]
 
 # Application definition
 INSTALLED_APPS = [
