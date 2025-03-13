@@ -2,8 +2,8 @@
 .env
 .env.local
 
-# Sensitive files
-# settings.py
+# .gitignore
+local_settings.py
 
 # Django
 *.log

@@ -16,12 +16,6 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-e4rdk6myo+89#bkqcc#rfe=^d7j7emv12vu!c+u8q0wr@!a8zd'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
 ALLOWED_HOSTS = ['movix.onrender.com']
 
 # Application definition
@@ -103,8 +97,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# IMDb API key
-IMDB_API_KEY = os.getenv('IMDB_API_KEY', '4e6b291435msh4bf8f45675a1e60p142391jsn04ae146b8968')
-
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# settings.py
+try:
+    from .local_settings import *
+except ImportError:
+    pass
