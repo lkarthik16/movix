@@ -1,0 +1,26 @@
+# Environment variables
+.env
+.env.local
+
+# Sensitive files
+settings.py
+
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+media/
+
+# IDE/Editor
+.vscode/
+.idea/
+
+# Static files
+staticfiles/
+
+# Python
+venv/
+env/
+*.env

@@ -53,7 +53,7 @@ def search_movie(request):
                 print("Plot:", plot)  # Debugging
                 print("Ratings:", ratings)  # Debugging
                 
-                # Combine all data (without runtime)
+                # Combine all data
                 movie_info = {
                     'title': movie_data.get('l', ''),  # Use 'l' for title
                     'year': movie_data.get('y', ''),   # Use 'y' for year
