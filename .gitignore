@@ -3,7 +3,7 @@
 .env.local
 
 # Sensitive files
-settings.py
+# settings.py
 
 # Django
 *.log
