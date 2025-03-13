@@ -95,6 +95,6 @@ How to Use
 3. Click Search or select a suggestion from the autocomplete dropdown.
 4. View the movie details displayed on the page.
 
-![alt text](Movix-Snap-01.png)
-![alt text](Movix-Snap-02.png)
-![alt text](Movix-Snap-03.png)
+![alt text](Movix-1.png)
+![alt text](Movix-2.png)
+![alt text](Movix-3.png)
