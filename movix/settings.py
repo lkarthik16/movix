@@ -105,6 +105,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # settings.py
+
+DEBUG = os.getenv("DEBUG", "False") == "True"  # Render will use this
+
 try:
     from .local_settings import *
 except ImportError:
