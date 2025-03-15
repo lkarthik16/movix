@@ -113,3 +113,25 @@ try:
 except ImportError:
     pass
 
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "file": {
+            "level": "ERROR",
+            "class": "logging.FileHandler",
+            "filename": "server_errors.log",
+        },
+    },
+    "loggers": {
+        "django": {
+            "handlers": ["file"],
+            "level": "ERROR",
+            "propagate": True,
+        },
+    },
+}
+
+os.system("python manage.py migrate")
+
+os.system("python manage.py collectstatic --noinput")
