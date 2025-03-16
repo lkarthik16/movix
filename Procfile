@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:$PORT movix.wsgi:application
+web: gunicorn movix.wsgi:application --bind 0.0.0.0:$PORT
