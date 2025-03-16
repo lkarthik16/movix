@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = os.getenv("DEBUG", "False") == "True"  # Render will use this
 
 ALLOWED_HOSTS = [
-    '.onrender.com', # Allows all Render subdomains
+    'movix-q09j.onrender.com',
     'localhost',  # For local development
     '127.0.0.1',  # For local development
 ]
