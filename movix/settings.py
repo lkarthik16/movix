@@ -12,16 +12,21 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DEBUG = os.getenv("DEBUG", "False") == "False"  # Render will use this
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-e4rdk6myo+89#bkqcc#rfe=^d7j7emv12vu!c+u8q0wr@!a8zd')
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = os.getenv("DEBUG", "False") == "True"
 
 ALLOWED_HOSTS = [
-    'movix-q09j.onrender.com', # Allows all Render subdomains
-    'localhost',  # For local development
-    '127.0.0.1',  # For local development
+    'movix-q09j.onrender.com',
+    'localhost',
+    '127.0.0.1',
 ]
 
 # Application definition
@@ -68,10 +73,7 @@ WSGI_APPLICATION = 'movix.wsgi.application'
 
 # Database
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
 }
 
 # Password validation
@@ -107,6 +109,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# IMDb API key
+IMDB_API_KEY = os.getenv('IMDB_API_KEY', '4e6b291435msh4bf8f45675a1e60p142391jsn04ae146b8968')
 
 # local_settings.py
 try:
