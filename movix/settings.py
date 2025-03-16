@@ -16,7 +16,7 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DEBUG = os.getenv("DEBUG", "False") == "True"  # Render will use this
+DEBUG = os.getenv("DEBUG", "False") == "False"  # Render will use this
 
 ALLOWED_HOSTS = [
     'movix-q09j.onrender.com', # Allows all Render subdomains
