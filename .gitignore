@@ -2,7 +2,6 @@
 .env
 .env.local
 
-
 # Ignore local settings
 local_settings.py
 
